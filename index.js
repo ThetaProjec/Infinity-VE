@@ -15,7 +15,7 @@ var express = require('express'),
  */
 app.use(express.bodyParser());
 
-app.configure(function () {
+app.use(function () {
     app.use(express.static(__dirname + '/public'));
     app.use(express.errorHandler({ dumpExceptions : true, showStack : true }));
 
