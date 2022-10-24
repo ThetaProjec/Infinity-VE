@@ -14,12 +14,8 @@ var express = require('express'),
  * EXPRESS CONFIGURATION
  */
 app.use(express.bodyParser());
-
-app.use(function () {
-    app.use(express.static(__dirname + '/public'));
-    app.use(express.errorHandler({ dumpExceptions : true, showStack : true }));
-
-});
+app.use(express.static(__dirname + '/public'));
+app.use(express.errorHandler({ dumpExceptions : true, showStack : true }));
 
 
 /**
